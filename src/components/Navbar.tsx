@@ -112,7 +112,7 @@ export default function Navbar({ location }: Props) {
                     </section>
                 </div>
             </nav>
-            <section className="flex  max-w-7xl px-2 md:hidden "> {/* justify- center*/} 
+            <section className="flex  max-w-7xl px-2 justify- center md:hidden "> {/* justify- center*/} 
                 <div className="relative " >
                     <SearchBox value={city}
                         onSubmit={handleSubmiSearch}
