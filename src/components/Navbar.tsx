@@ -99,7 +99,7 @@ export default function Navbar({ location }: Props) {
                             title=' Your current loaction'
                             onClick={handleCurrentLocation}
                             className='text-2xl text-gray-400 hover-opacity-80 cursor-pointer' />
-                        <MdLocationOn title='Location shown' className='text-3xl' />
+                        <MdLocationOn title='Currently Showing' className='text-3xl' />
                         <p className='text-slate-900/80 text-sm'>{location}</p>
                         <div className="relative hidden md:flex" >
                             <SearchBox value={city}
