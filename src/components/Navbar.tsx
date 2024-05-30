@@ -9,6 +9,7 @@ import { loadingCityAtom, placeAtom } from '@/app/atom';
 import { useAtom } from 'jotai';
 import { setTimeout } from 'timers';
 
+
 type Props = { location?: string };
 
 export default function Navbar({ location }: Props) {
@@ -20,6 +21,8 @@ export default function Navbar({ location }: Props) {
     const [showSuggestions, setShowSuggestions] = useState(false);
     const [place, setPlace] = useAtom(placeAtom);
     const [_, setLoadingCity] = useAtom(loadingCityAtom);
+
+    
 
     async function handleInputChange(value: string) {
         setCity(value);
@@ -96,7 +99,7 @@ export default function Navbar({ location }: Props) {
                             title=' Your current loaction'
                             onClick={handleCurrentLocation}
                             className='text-2xl text-gray-400 hover-opacity-80 cursor-pointer' />
-                        <MdLocationOn className='text-3xl' />
+                        <MdLocationOn title='Location shown' className='text-3xl' />
                         <p className='text-slate-900/80 text-sm'>{location}</p>
                         <div className="relative hidden md:flex" >
                             <SearchBox value={city}
@@ -112,7 +115,7 @@ export default function Navbar({ location }: Props) {
                     </section>
                 </div>
             </nav>
-            <section className="flex  max-w-7xl px-2 justify- center md:hidden "> {/* justify- center*/} 
+            <section className="flex  max-w-7xl px-2 justify- center md:hidden "> {/* justify- center*/}
                 <div className="relative " >
                     <SearchBox value={city}
                         onSubmit={handleSubmiSearch}
@@ -123,6 +126,7 @@ export default function Navbar({ location }: Props) {
                         handleSuggestionClick,
                         error
                     }} />
+                   
                 </div>
             </section>
         </>

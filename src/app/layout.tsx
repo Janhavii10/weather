@@ -1,8 +1,12 @@
 'use client'
 // import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { ToastContainer } from "react-toastify";
 import "./globals.css";
+import 'react-toastify/dist/ReactToastify.css';
 import { QueryClient, QueryClientProvider, useQuery } from 'react-query'
+
+
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -21,7 +25,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <QueryClientProvider client={queryClient}>
-      <body className={inter.className}>{children}</body>
+        <body className={inter.className}>{children}
+        <ToastContainer/>
+        </body>
       </QueryClientProvider>
     </html>
   );

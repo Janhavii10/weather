@@ -7,7 +7,7 @@ import { convertKelvinToCelsius } from '@/utils/convertKelvinToCelsius';
 export interface ForecastWeatherDetailProps extends WeatherDetailProps {
   weatehrIcon: string;
   date: string;
-  day: string;
+  day: string; 
   temp: number;
   feels_like: number;
   temp_min: number;
